@@ -34,9 +34,9 @@ if __name__ == "__main__":
 
     # begin
     print('// Generated from {}'.format(URL))
-    print('Set<String> EMOJI_HASH_SET = new HashSet<>(Arrays.asList(')
+    print('private static Set<String> EMOJI_HASH_SET = new HashSet<>(Arrays.asList(')
     for (idx, val) in enumerate(sorted(emoji_set)):
-        print('"\\u{}"'.format(val), end='')
+        print('"{}"'.format(val), end='')
         if idx != len(emoji_set) - 1:
             print(",", end='')
         if (idx % 10) == 9:
